@@ -102,6 +102,13 @@ ul{
 .itens{
     padding: 10px;
 }.itens img, button, h3{width: 100%;}
+.forRoom{
+    background-color: var(--CorE);
+    border: none;
+    color: var(--CorC);
+
+    padding: 10px 20px 10px 20px;
+}
 .playButton{
     background-color: var(--CorE);
     border: none;
@@ -113,7 +120,7 @@ ul{
     background-color: var(--CorF);
     color: var(--CorC);
 
-    margin: auto; margin-bottom: 20px;
+    margin: 20px auto 20px auto;
     padding: 20px;
     width: 85%;
 }#a1 img{width: 100%; border-radius: 20px;}#a1 button{ width: 100%;}
@@ -121,12 +128,19 @@ ul{
     background-color: var(--CorF);
     color: var(--CorC);
 
-    margin: auto; margin-bottom: 20px;
+    margin: 20px auto 20px auto;
     padding: 20px;
     width: 85%;
 }#a2 img{border-radius: 20px;}
 #backButton a{
     font-size: 24px;
+}
+#papa{
+    text-align: center;
+}
+#papa i{
+    font-size: 186.6px;
+    margin: auto;
 }
 #scrollButton{
     background-color: var(--CorE);

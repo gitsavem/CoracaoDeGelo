@@ -12,7 +12,42 @@
     <header>
         <div><i class="material-symbols-outlined" id="backButton"><a href="../index.html">arrow_back</a></i></div>
         <h1>Coração de Gelo</h1>
+        <p>Esta é uma história instigante...</p>
     </header>
+    <main>
+        <section>
+            <article id="a2">
+                <h2>Distúrbio em Santo Antônio de Lisboa</h2>
+                <div id="papa">
+                    <h3>Livro Mestre</h3>
+                    <i class="material-symbols-outlined iconsButton">book</i>
+                    <h3>Livro para Jogadores</h3>
+                    <i class="material-symbols-outlined iconsButton">person</i>
+                </div>
+                <button class="forRoom"><a href="https://discord.gg/qjYfYfQg" target="_blank">Ir para uma Sala</a></button>
+            </article>
+        </section>
+    </main>
+    <button id="scrollButton"><i class="material-symbols-outlined" onclick="scrollTop()"><a href="#">expand_less</a></i></button>
+    <footer>
 
+    </footer>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("scrollButton").style.display = "block";
+            } else {
+                document.getElementById("scrollButton").style.display = "none";
+            }
+        }
+
+        // Função para rolar para o topo da página quando o botão é clicado
+        function topFunction() {
+            document.body.scrollTop = 0; // Para navegadores que não suportam document.documentElement
+            document.documentElement.scrollTop = 0; // Para navegadores que suportam document.documentElement
+        }
+    </script>
 </body>
 </html>
