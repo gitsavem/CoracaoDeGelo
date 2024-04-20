@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CDG- Início</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" media="all">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    rel="stylesheet" />
 </head>
 <body>
+	<menu id="MenuW">
+        <div><i class="material-symbols-outlined" onclick="Menu()">close</i></div>
+		<ul>
+			<li>Hi</li>
+		</ul>
+	</menu>
     <header>
-        <h1>Coração de Gelo</h1>
+    	<div><i class="material-symbols-outlined" onclick="Menu()">menu</i></div>
+        <h1 id="DT">Coração de Gelo</h1>
         <p>Conheça o imperfeito universo de Coração de Gelo</p>
     </header>
     <main>
@@ -23,17 +32,27 @@
                 <li>Espaço Criativo</li>
             </ul>
         </section>
-        <section id="s2">
+        <section class="s2">
             <article id="a1">
                 <h2>Última História</h2>
                 <img id="gH" src="images/deusaHoly.jpg" alt="Deusa das Relações">
                 <h3>"Resquícios de uma péssima relação"</h3>
                 <p>Nem tudo são flores, o que era pra ser algo especial se tornou um mal terrível qeu abomina a vida de muitas pessoas mesmo depois de tanto tempo. Vá mais a fundo nessa história e ajude os inocentes.</p>
-                <button class="Play">Jogar</button>
+                <button class="playButton">Jogar</button>
             </article>
             <article id="a2">
-                <h2>Outras Histórias</h2>
-                <p></p>
+            	<h2>Outras Histórias </h2>
+            	<div id="stories">
+                    <div class="itens">
+                        <img class="HImages" src="images/imagemRepresentativa.jpeg" alt="Imagem Representativa">
+                        <h3>"Distúrbio em Santo Antônio de Lisboa"</h3>
+                        <button class="playButton"><a href="pages/hist1.html">Jogar</a></button>
+                    </div>
+                    <div class="itens">
+                        <img class="HImages" src="images/Diario.jpeg" alt="Imagem Representativa">
+                        <h3>"Até o fim, Martha."</h3>
+                        <button class="playButton"><a href="pages/hist2.html">Jogar</a></button>
+                    </div>
             </article>
             <article>
                 <h2>Personagens</h2>
@@ -54,8 +73,35 @@
             
         </section>
     </main>
+    <button id="scrollButton"><i class="material-symbols-outlined" onclick="scrollTop()"><a href="#">expand_less</a></i></button>
     <footer>
         <p>Parece o fim, bem, espero que tenha gostado!</p>
     </footer>
+    
+    <script>
+        function Menu(){
+            if (MenuW.style.display == 'none'){
+                MenuW.style.display = 'block'
+            } else {
+                MenuW.style.display = 'none'
+            }
+        }
+        
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("scrollButton").style.display = "block";
+            } else {
+                document.getElementById("scrollButton").style.display = "none";
+            }
+        }
+
+        // Função para rolar para o topo da página quando o botão é clicado
+        function topFunction() {
+            document.body.scrollTop = 0; // Para navegadores que não suportam document.documentElement
+            document.documentElement.scrollTop = 0; // Para navegadores que suportam document.documentElement
+        }
+    </script>
 </body>
 </html>
